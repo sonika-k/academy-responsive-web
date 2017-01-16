@@ -19,11 +19,17 @@
           <ul v cloak>
             <li v-for="movie in movies">
               <h3> {{movie.name}} </h3>
-              <em> {{movie.length}} </em>
+              <em> {{movie.length}} minutes</em>
+              <button v-on:click="sendVote(movie.id)">Vote</button>
+              <span class="votes">{{movie.votes}}</span>
             </li>
           </ul>
       </div>
     </div>
+
+    <footer class="content-footer">
+      Made by Sonika
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@2.1.8/dist/vue.js"></script>
